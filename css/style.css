@@ -1,0 +1,96 @@
+/*
+  Slide Out CSS Menu
+  Created By: James Bovis
+  Copyright 1018
+  Licensed under MIT (https://github.com/James-Bovis/slide-out-css-menu/blob/master/LICENSE)
+*/
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  margin: 0px;
+  text-decoration: none;
+}
+
+.slide-out-menu-demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+.slide-out-menu-demo__intro {
+  text-align: center;
+  padding: 1.5rem;
+}
+.slide-out-menu-demo__intro h1 {
+  margin-bottom: 1rem;
+}
+.slide-out-menu-demo__intro p.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.slide-out-menu-demo__intro__button {
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: inline-block;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100vw;
+}
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.slide-out-menu__wrapper {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 30;
+  background: rgba(73, 72, 92, 0);
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.slide-out-menu__wrapper.open {
+  background: rgba(73, 72, 92, 0.6);
+  pointer-events: all;
+}
+
+.slide-out-menu__content {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  height: 100%;
+  z-index: 35;
+  opacity: 0;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+.slide-out-menu__content__container {
+  padding: 2rem;
+  width: 100%;
+}
+.slide-out-menu__content__container img {
+  border-radius: 50%;
+}
+.slide-out-menu__content.open {
+  right: 0;
+  cursor: pointer;
+  opacity: 1;
+  transition-delay: 0.25s;
+}
